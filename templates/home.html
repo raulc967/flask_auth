@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h1>Hello</h1>
+        <a href="/register">register</a><br>
+        <a href="/login">Login</a>
+    </div>
+    {% for feeback in feedbacks %}
+        <div class="container">
+            <h3>{{ feedback.title }}</h3>
+            <p>{{ feedback.content }}</p>
+            <h5>by: {{ feedback.username }}</h5>
+        </div>
+    {% endfor %}
+{% endblock %}
